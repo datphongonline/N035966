@@ -1,0 +1,80 @@
+body{
+    background-color: #f2f2f2
+}
+header{
+    position: relative;
+    background-color: white
+}
+.logo img{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 100px
+}
+section{
+    position: relative;
+    
+    width: 800px;
+    left: 250px;
+}
+.thongtin{
+    margin: 0px;
+    background-color: white;
+    width: 387px;
+    height: 400px;
+    float: left;
+    margin-top: 10px;
+    padding-left: 10px;;
+    padding-top: 30px
+}
+.kttt{
+    background-color: white;
+    
+    float: left;
+    margin-left: 22px;
+    padding-left: 10px;
+    width: 300px
+}
+.kttt .anh img{
+    width: 100px;
+    height: 100px;;
+    float: left;
+
+}
+.kttt .anh p{
+    float: left
+}
+.thongtindat{
+    clear: left;
+    border-top: 1px solid #f2f2f2
+}
+.kieuphong{
+    border-top: 1px solid #f2f2f2
+}
+.csthanhtoan{
+    background-color: white;
+    
+    float: left;
+    width: 310px;
+    margin: 20px
+}
+.ctgia{
+    background-color: white;
+    
+    float: left;
+    width: 400px;
+    height: 300px;
+    margin-top: 55px;
+    padding-left: 10px;
+}
+.ctgia div{
+    border-bottom: 1px solid #f2f2f2
+}
+input[type=submit]{
+    border: none;
+    background-color:  #4CAF50;
+    color: white;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}

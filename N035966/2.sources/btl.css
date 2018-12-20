@@ -1,0 +1,396 @@
+body{
+    background-color: #f2f2f2
+}
+header{
+    width: 100%;
+    height: 50px;
+    max-height: 100px;
+    position: relative;
+    background-color: white;
+}
+.logo img{
+    height: 100%;
+    width: 50px;
+
+    float: left;
+    margin-left: 5%;
+
+}
+.hotro{
+    width: 20%;
+    float: left;
+}
+.hotro a{
+    display: inline-block;
+    margin-left: 20px;
+    color: #0066ff
+    
+}
+.hotro a:hover{
+    text-decoration: none
+}
+.login{
+    height: 100%;
+    width: 10%;
+    float: left;
+}
+.login input[type=submit]{
+    padding: 5px;
+    color: white;
+    background-color: #0066ff;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+.muc ul{
+    
+    list-style-type: none;
+    width: 50%;
+    height: 60px;
+    display: block;
+    float: left;
+    margin: 0px;
+    color: #0066ff
+}
+.muc ul li{
+    display: inline-block;
+}
+.muc ul li img{
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+}
+/*------------ dang nhap */
+.formlogin{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.formlogin form{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    left: 40%;
+    top: 100px;
+    background-color: #f2f2f2;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+  }
+    
+.thoat{
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 40px
+}
+/*-------------- gioi thieu --*/
+.ten{
+    position: relative;
+    width: 80%;
+    height: 30px;
+    clear: left;
+    margin-bottom: 10px;
+    background-color: #0066ff;
+    
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    left: 10%;
+    
+}
+
+/*------------------- slide show-*/
+
+section{
+    position: relative;
+    margin-top: 50px;
+    
+    width: 90%;
+    clear: left;
+    left: 5%;
+}
+.slideshow{
+    width: 80%;
+    height: 350px;
+    position: relative;
+    left: 10%;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 1px 1px gray
+}
+#myImage{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#myImage2{
+    display: inline-block;
+    height: 100%;
+    width: 0%;
+    z-index: 0;
+}
+/*gioithieu 2*/
+
+.tiennghi{
+    color: #0066ff;
+    background-color: white;
+    border: none
+}
+.tiennghi legend{
+    font-size: 25px;
+}
+.diachi img{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-bottom: 0px;
+}
+.diachi p{
+    width: 90%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 40px
+}
+.tiennghi1{
+    padding-left: 15%;
+}
+.tiennghi1 div{
+    border-right: 1px solid gray;
+    height: 90px;
+    width: 110px;
+    position: relative;
+    float: left;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    color: gray
+}
+.tiennghi1 div:hover{
+    z-index: 1;
+}
+.tiennghi1 div img{
+    height: 45px;
+    width: 50px;
+    margin-left: 10px
+}
+.tiennghi1 div p{
+    
+}
+/* tim kiem */
+.thongtinphong{
+    background-color: white;
+    margin-top: 30px;
+    width: 90%;
+    position: relative;
+    
+    left: 5%;
+    border: none
+}
+.thongtinphong legend{
+    color: black;
+    font-size: 25px
+}
+
+.phong{
+    margin-top: 80px;
+    margin-left: 5%;
+    position: relative;
+    border: 1px solid white;
+    width: 280px;
+    height: 250px;
+    float: left;
+    background-color: #f2f2f2;
+   
+}
+.phong:hover{
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.phong a img{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 170px;
+}
+.phong a{
+    text-decoration: none;
+}
+.phong a ul{
+    position:absolute;
+    display: block;
+    margin: 0;
+    bottom: 0px;
+    left: 10%;
+    width: 70%;
+    color: #4CAF50;
+    font-size: 15px
+}
+/*tim kiem */
+.timphong{
+   margin-top: 40px;
+   height: 50px;
+   width: 100%;
+   top: 0;
+   position: sticky;
+   z-index: 1;
+   clear: left;
+   padding-top: 30px;
+   border-top: 1px solid gray
+}
+.tuychonTimkiem{
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    padding-left: 5%;
+    float: left;
+    margin-left: 30px;
+    border-right: 1px solid gray;
+    border-radius: 10px;
+    border: 1px solid white
+}
+.tuychonTimkiem:hover{
+    border: 1px solid gray
+}
+.tuychonTimkiem img{
+    display: block;
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.mttuychonTimkiem{
+    width: 80%;
+    height: 100%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px
+}
+.mttuychonTimkiem p{
+    display: block;
+    padding-left: 10px;
+    margin: 0px;
+    color: gray;
+    font-size: 15px
+}
+.mttuychonTimkiem select{
+    margin-left: 10px;
+    font-size: 16px;
+    border: none;
+}
+.timphong input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+/*phan gioi thieu*/
+.gioithieu{
+    background-color: white;
+    margin-top: 30px;
+    width: 90%;
+    position: relative;
+    font-size: 17px;
+    left: 5%;
+    border: none;
+    border-top: 1px solid gray
+}
+.gioithieu legend{
+    color: black;
+    font-size: 25px
+}
+/*-------*/
+.hiendatphong{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+
+}
+
+
+.ctphong{
+    width: 70%;
+    height: 580px;
+    overflow: auto;
+    left: 20%;
+    position: relative;
+    background-color: #f2f2f2;
+    padding-left: 30px
+   
+}
+
+.anhcuaphong{
+    float: left;
+}
+.chitiettungphong{
+    padding-left: 30px;
+    width: 60%;
+    float: left;
+}
+.giatiendatphong{
+    width: 200px;
+    float: left;
+    margin-left: 80px
+
+}
+.giatiendatphong p{
+    color: coral;
+    font-size: 20px
+}
+.giatiendatphong a button{
+    width: 100px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+/*--------*/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #000033;
+    clear: left;
+}
