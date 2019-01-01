@@ -1,0 +1,276 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 50px;
+    margin-top: 0px;
+    background-color: #006699;
+    box-sizing: border-box;
+    position: sticky;
+}
+header .tenql{
+    display: inline-block;
+    width: 200px;
+     margin-top: 0px;
+    box-sizing: border-box;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    
+}
+.tenql p{
+    padding-left: 70px;
+    position: absolute;
+    color: wheat;
+    display: none
+}
+/*hien thanh menu*/
+.container {
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-50deg) translate(-8px, 8px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(50deg) translate(-8px, -8px);
+  }
+
+/* .menu{
+    background-color: rgba(0,0,51,0.9);
+    color: white;
+    width: 300px;
+    height: 1000px;
+} */
+.menu{
+    float: left;
+    width: 200px;
+    height: 600px;
+    border-bottom: 5px solid #006699;
+    display: none;
+    overflow: auto;
+}
+.tuychon{
+    margin: 5px 0px;
+    padding: 8px 16px;
+    width: 200px;
+    border: none;
+    border-top: 1px solid gray;
+    cursor: pointer;
+}
+.tuychon:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.tuychon:focus{
+    background-color: #555;
+    color: white;
+}
+/* .khoi1:hover ul{
+    display: block;
+} */
+.khoi1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    width: 180px;
+    background-color: #f1f1f1;
+    display: none;
+  }
+  
+.khoi1 ul li{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+  
+  /* Change the link color on hover */
+.khoi1 ul li:hover {
+    background-color: #555;
+    color: white;
+  }
+/*section 2 hien thong tin*/
+.sec2{
+    padding-top: 30px;
+    float: left;
+    width: 850px;
+    position: relative;
+    margin-left: 200px;
+    box-sizing: border-box;
+    background-color: rgba(204, 204, 204, 0.1)
+}
+.ketqua{
+    height: 300px;
+    border-bottom: 1px solid gray;
+    border-top: 3px solid #006699;
+    width: 400px;
+    float: left;
+    margin: 20px 10px;
+    background-color: white
+}
+/* hien thong tin*/
+.noidung{
+    width: 850px;
+    float: left;
+    height: 500px;
+    overflow: auto;
+}
+#nhaptk {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 150px;
+    position: relative;
+    float: right;
+    font-size: 16px;
+    padding: 10px 20px 10px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  
+  #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+  
+  #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+
+/* nút xóa sửa*/
+.themtt{
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+.themtt:hover{
+    border-bottom: 1px solid gray;
+}
+.nutsua, .nutxoa{
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 20px;
+    background-color: #006699;
+    color: white;
+    border-radius: 2px;
+}
+.nut:hover{
+    opacity: 0.7;
+}
+
+/* div sua xoa*/
+.themsuadl1{/* Hidden by default */
+    display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.themsuadl{
+    position: relative;
+    width: 50%;
+    left: 25%;
+    height: auto;
+    background-color: white;
+    padding: 50px 110px;
+    box-sizing: border-box;
+}
+.themsuadl input[type=text]{
+    margin: 6px 10px;
+    padding: 6px 10px;
+    width: 260px
+}
+.themsuadl input[type=date]{
+    margin: 6px 10px;
+    padding: 6px 10px;
+    width: 130px
+}
+.themsuadl button{
+    margin: 30px 16px;
+    padding: 6px 10px;
+    width: 100px;
+    float: right;
+}
+.themsuadl label{
+    display: inline-block;
+    width: 100px;
+    position: relative;
+}
+/*xóa dl*/
+.xoadl1{/* Hidden by default */
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(255,255,255); /* Fallback color */
+    background-color: rgba(255,255,255,0); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  .xoadl{
+    position: relative;
+    width: 20%;
+    left: 45%;
+    height: auto;
+    background-color: white;
+    padding: 30px 10px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    margin-top: 100px;
+}
+.xoadl button{
+    margin: 30px 15px;
+    padding: 6px 10px;
+    width: 80px;
+}
+.xoadl input[type=text]{
+    margin: 6px 10px;
+    padding: 6px 10px;
+    width: 200px
+}
