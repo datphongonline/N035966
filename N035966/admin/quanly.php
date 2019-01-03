@@ -23,6 +23,15 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
+        <div class="thongtinht" id="dangxuat">
+            <span>đăng xuất</span>
+        </div>
+        <div class="thongtinht">
+            <span>Mới</span>
+        </div>
+        <div class="tenks" style="font-size: 25px">
+            <span>Hanoi Hotel</span>
+        </div>
     </header>
     <section class="menu" id="menu">
         <div class="khoi1">

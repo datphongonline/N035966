@@ -11,7 +11,7 @@
      mysqli_set_charset($conn,'utf8');
      $kq3 = mysqli_query($conn,$lenh3);
      ?>
-    <form class="hiendatphong" id="hiendatphong" method="POST" action='thanhtoan/hoadontt.php'>
+    <form class="hiendatphong" id="hiendatphong" method="POST" action='thanhtoan/hoadon.php'>
         <div class="ctphong" id="ctphong">
             <div class="thoat" id="thoat1">x</div>
             <div class="anhcuaphong">

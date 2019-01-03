@@ -34,6 +34,7 @@
         </div>
         <div class="login">
             <input type="button" id="login" value="đăng nhập">
+            <input type="button" id="kiemtradp" value="kt đặt phòng">
         </div>
     </header>
     <!--kết thúc header-->
@@ -46,14 +47,16 @@
         <div class="formlogin" id="formlogin" method='POST'>
             <form action="#">
                 <div class="thoat" id="thoat">x</div>
+                <h2 style=" text-align: center">Đăng nhập</h2>
                 <label for="username"><b>Username</b></label>
                 <input type="text" placeholder="nhập tên" name="username" id="username" required> <br>
 
                 <label for="password"><b>Password</b></label>
                 <input type="password" placeholder="nhập mật khẩu" name="password" id="password" required> <br>
 
-                <span id="thongbaoloi"></span>
+                
                 <input type="button" id="btlogin" value="đăng nhập">
+                <span id="thongbaoloi" style="clear:right"></span>
             </form>
         </div>
         <!-- -------form đăng nhập------->
@@ -112,13 +115,13 @@
             <div class="tuychonTimkiem">
                 <img src="image/pic1.jpg" alt="">
                 <div class="mttuychonTimkiem">
-                    <p>Số Người</p>
+                    <p>Số giường</p>
                     <select name="sogiuong" id="sogiuong">
                         <option value="1">1 giường</option>
-                        <option value="2">2 Khách</option>
-                        <option value="3">3 Khách</option>
-                        <option value="4">4 Khách</option>
-                        <option value="5">5 Khách</option>
+                        <option value="2">2 giường</option>
+                        <option value="3">3 giường</option>
+                        <option value="4">4 giường</option>
+                        <option value="5">5 giường</option>
                     </select>
                 </div>
             </div>

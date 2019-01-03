@@ -3,6 +3,10 @@
       $ngaynhan = $_POST['ngaynhan'];
       $ngaytra = $_POST['ngaytra'];
       $map = $_POST['map'];
+      $nnhan = date_create($ngaynhan);
+      $ntra = date_create($ngaytra);
+      $songay= date_diff($nnhan,$ntra);
+    $tongtien =  0;
       $lenh3 = 'select tentn from tiennghi where matn in(select matn from cttn where map = "'.$map.'")';
       $lenh4 = 'select map,giap from phong where map ='.$map;
        $kq4 = mysqli_query($conn, $lenh4);
@@ -15,9 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>đặt phòng</title>
-    <link rel="stylesheet" href="datphong.css">
+    <link rel="stylesheet" href="thanhtoan.css">
     <script src="jquery.js"></script>
-    <script src="datphong.js"></script>
+    <script src="thanhtoan.js"></script>
 </head>
 <body>
     <header>
@@ -37,12 +41,12 @@
                 <?php
                 
                  while($row4 = mysqli_fetch_assoc($kq4)){ ?>
-                <p>Giá Thuê Phòng:<span id="giathue"><?php echo $row4['giap'] ?></span> (VND/Ngày)</p>
+                <p>Giá Thuê Phòng:<span id="giathue"><?php $tongtien=$row4['giap']; echo $row4['giap']; ?></span> (VND/Ngày)</p>
                  <?php }?>
                 <p>Phí Dịch Vụ và Phụ Thu Khách Sạn: 0 VND</p>
-                <p>số ngày thuê: <span class="songaydat">0</span></p>
+                <p>số ngày thuê: <span class="songaydat"><?php echo $songay->format("%a") ?></span></p>
             </div>
-                <p><b>Tổng Tiền Thanh Toán: </b><span id="tongtien">10000</span> (VND)</p>
+                <p><b>Tổng Tiền Thanh Toán: </b><span id="tongtien"><?php echo $songay->format("%a")*$tongtien; ?></span> (VND)</p>
         </div>
         <div class="kttt">
             <h3>Kiểm Tra Thông Tin Đặt Phòng</h3>

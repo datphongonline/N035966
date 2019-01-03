@@ -7,7 +7,6 @@ header{
     margin-top: 0px;
     background-color: #006699;
     box-sizing: border-box;
-    position: sticky;
 }
 header .tenql{
     display: inline-block;
@@ -53,6 +52,29 @@ header .tenql{
     transform: rotate(50deg) translate(-8px, -8px);
   }
 
+.thongtinht{
+    display: inline-block;
+    float: right;
+    color: wheat;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.thongtinht:hover{
+    color: gold;
+}
+.tenks{
+    display: inline-block;
+    float: right;
+    color: wheat;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 12px;
+    margin-right:300px
+}
 /* .menu{
     background-color: rgba(0,0,51,0.9);
     color: white;
@@ -139,15 +161,19 @@ header .tenql{
 #nhaptk {
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    width: 150px;
+    width: 100px;
     position: relative;
     float: right;
+    transition: width 1s;
     font-size: 16px;
     padding: 10px 20px 10px 40px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
   }
-  
+#nhaptk:focus{
+    width: 250px;
+    border: 1px solid gray
+}
   #myTable {
     border-collapse: collapse;
     width: 100%;
@@ -179,8 +205,25 @@ header .tenql{
     box-sizing: border-box;
     margin-left: 20px;
 }
-.themtt:hover{
-    border-bottom: 1px solid gray;
+.luachon {
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.themtt:hover, .luachon:hover{
+    background-color: #555;
+    color: white;
+}
+#ttngaynhan, #ttngaytra, #xemtheott{
+    margin: 5px 10px;
+    padding: 6px 10px;
+    width: 130px;
 }
 .nutsua, .nutxoa{
     border: none;
@@ -239,6 +282,11 @@ header .tenql{
     width: 100px;
     position: relative;
 }
+.themsuadl select{
+    margin: 6px 10px;
+    padding: 6px 10px;
+    width: 130px;
+}
 /*xóa dl*/
 .xoadl1{/* Hidden by default */
     display: none;
@@ -273,4 +321,51 @@ header .tenql{
     margin: 6px 10px;
     padding: 6px 10px;
     width: 200px
+}
+
+/*form kiem tra tt khách*/
+.ktdlk1{/* Hidden by default */
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+.ktdlk{
+    position: relative;
+    width: 50%;
+    left: 25%;
+    height: auto;
+    background-color: white;
+    padding: 50px 110px;
+    box-sizing: border-box;
+}
+.ktdlk input[type=text]{
+    margin: 6px 10px;
+    padding: 6px 10px;
+    width: 260px
+}
+
+.ktdlk button{
+    margin: 30px 16px;
+    padding: 6px 10px;
+    width: 100px;
+    height: 50px;
+    float: right;
+}
+.ktdlk label{
+    display: inline-block;
+    width: 100px;
+    position: relative;
+}
+.ktdlk select{
+    margin: 6px 10px;
+    padding: 6px 10px;
+    width: 130px;
 }

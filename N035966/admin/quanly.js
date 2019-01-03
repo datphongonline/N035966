@@ -104,24 +104,8 @@ $(document).ready(function(){
             }
         });
     });
-    $(document).on('click','#themdatphong', function(){
-        $.ajax({
-            url: 'dathuyphong/dsdatphong.php',
-            method:'GET',
-            success: function(response){
-                $('#in').html(response);
-            }
-        });
-    });
-    $(document).on('click','#capnhatdon', function(){
-        $.ajax({
-            url: 'capnhatdon/dscapnhatdon.php',
-            method:'GET',
-            success: function(response){
-                $('#in').html(response);
-            }
-        });
-    });
+    
+    
 
     // hien thong bao
     $(document).on('click','.themtt', function(){
@@ -303,6 +287,18 @@ $(document).ready(function(){
             
     });
 //------------------------------------ phan dat phong --------------
+$(document).on('click','#themdatphong', function(){
+    themdatphong();
+});
+function themdatphong(){
+    $.ajax({
+        url: 'dathuyphong/dsdatphong.php',
+        method:'GET',
+        success: function(response){
+            $('#in').html(response);
+        }
+    });
+}
 $(document).on('click','.nutsua',function(){ // thay doi
     $('#suadl').css({'display':'block'});
      var id = $(this).attr('value');
@@ -359,7 +355,7 @@ $(document).on('click', '#xacnhanthemDP', function(){ // thay doi
             if(response == 1){
                 $('#tbthem').html('đã thêm thành công');
                 $('#tbthem').css({'color':'#006699'});
-                $('#xacnhanthemDP').hide();
+                themdatphong();
             }else{
                 $('#tbthem').html('lỗi. kiểm tra lại');
                 $('#tbthem').css({'color':'red'});
@@ -395,7 +391,7 @@ $(document).on('click', '#xacnhansuaDP', function(){ // thay doi
             if(response == 1){
                 $('#tbsua').html('sửa thành công');
                 $('#tbsua').css({'color':'#006699'});
-                $('#xacnhansuaDP').hide();
+                themdatphong();
             }else{
                 $('#tbsua').html('lỗi,hãy kiểm tra lại dữ liệu');
                 $('#tbsua').css({'color':'red'});
@@ -423,6 +419,7 @@ $(document).on('click', '#xacnhanxoaDP', function(){ // thay doi
                 $('#tbxoa').html('xóa thành công');
                 $('#tbxoa').css({'color':'#006699'});
                 $('#xacnhanxoaDP').hide();
+                themdatphong();
             }
         }
     });
@@ -430,7 +427,188 @@ $(document).on('click', '#xacnhanxoaDP', function(){ // thay doi
         
 });
 
+//------------------------------------ phan cập nhật phòng --------------
 
+$(document).on('click','#capnhatdon', function(){
+    // $.ajax({
+    //     url: 'capnhatdon/dscapnhatdon.php',
+    //     method:'GET',
+    //     success: function(response){
+    //         $('#in').html(response);
+    //     }
+    // });
+    capnhatphong();
+});
+function capnhatphong(){
+    $.ajax({
+        url: 'capnhatdon/dscapnhatdon.php',
+        method:'GET',
+        success: function(response){
+            $('#in').html(response);
+        }
+    });
+}
+$(document).on('click','.nutsua',function(){ // thay doi
+    $('#suadl').css({'display':'block'});
+     var id = $(this).attr('value');
+    $('#mattdpsua').attr('value',id);
+    $.ajax({
+        url: 'capnhatdon/laydlsua.php',
+        method: 'POST',
+        data: {id : id},
+        success: function(response){
+            var kq = response.split(',');
+            //$response =[$row['tenp'],$row['mak'],$row['tentt'],$row['mattdp'],$row['datphongtu'],$row['denngay'],$row['tongtien'] ,$row['chuthich']];
+            $('#tenpsua').attr('value',kq[0]);
+            $('#maksua').attr('value',kq[1]);
+            $('#datphongtusua').attr('value',kq[4]);
+            $('#denngaysua').attr('value',kq[5]);
+            $('#tongtiensua').attr('value',kq[6]);
+            $('#chuthichsua').attr('value',kq[7]);
+
+        }
+    })
+})
+$(document).on('click','.nutxoa', function(){ // thay doi
+    $('#xoadl').css({'display':'block'});
+    var id = $(this).attr('value');
+    $('#xacnhanxoaDON').attr('value',id); // chuyển id vào value để xác nhận
+});
+// cap nhat don
+$(document).on('click','#xnsuadon',function(){
+    var tenpsua = $('#tenpsua').val();
+    var mattdpsua = $('#mattdpsua').val();
+    var tendvsua = $('#tendvsua').val();
+    var tenttsua = $('#tenttsua').val();
+    var datphongtusua = $('#datphongtusua').val();
+    var denngaysua = $('#denngaysua').val();
+    var chuthichsua = $('#chuthichsua').val();
+    if(tenpsua == "" || mattdpsua == ''){
+        $('#tbsua').html('bạn chưa nhập tên');
+        $('#tbsua').css({'color':'red'});
+    }
+    else{
+        $.ajax({
+            url: 'capnhatdon/suacapnhatdatphong.php',
+            method: 'POST',
+            data:{
+                tenpsua: tenpsua, mattdpsua: mattdpsua, tendvsua:tendvsua, tenttsua: tenttsua, datphongtusua: datphongtusua,
+                denngaysua:denngaysua,
+                chuthichsua:chuthichsua
+            },
+            success: function(res){
+                
+                if(res == 1){
+                    $('#tbsua').html('sửa thành công');
+                    $('#tbsua').css({'color':'#006699'});
+                    capnhatphong();
+                }else{
+                    $('#tbsua').html('lỗi,hãy kiểm tra lại dữ liệu');
+                    $('#tbsua').css({'color':'red'});
+                }
+            }
+        });
+    }
+});
+// xoa cap nhat phòng
+$(document).on('click','#xacnhanxoaDON', function(){ // thay doi
+    var id = $('#xacnhanxoaDON').attr('value');
+    var chuthichxoaDON = $('#chuthichxoaDON').val();
+    if(chuthichxoaDON==''){
+        $('#tbxoa').html('chưa nhập lý do');
+        $('#tbxoa').css({'color':'red'});
+    }else{
+        $.ajax({
+        url: 'capnhatdon/xoacapnhatdon.php',
+        method: 'POST',
+        data:{ chuthichxoaDON:chuthichxoaDON
+               ,id : id},
+        success: function(response){
+            if(response == 1){
+                $('#tbxoa').html('xóa thành công');
+                $('#tbxoa').css({'color':'#006699'});
+                capnhatphong();
+            }
+        }
+    });
+    }
+        
+});
+// chức năng kiểm tra thông tin khách
+$(document).on('click','#thoatktdlk',function(){
+    $('#ktdlk1').css({'display':'none'});
+})
+$(document).on('click','#thongtinkhach',function(){
+    $('#ktdlk1').css({'display':'block'});
+})
+$(document).on('click','#hienktdlk',function(){
+    var mak = $('#makkt').val();
+    if(mak == ''){
+        $('#tbkt').html('bạn chưa nhập mã khách cần tìm');
+        $('#tbkt').css({'color':'red'});
+    }else{
+        $.ajax({
+            url: 'capnhatdon/thongtinkhach.php',
+            method: 'POST',
+            data:{mak :mak},
+            success:function(res){
+                $('#tbkt').html(res);
+                $('#tbkt').css({'color':'black', 'font-size':'20px'});
+            }
+        })
+    }
+});
+// chuwc năng xem đơn theo ngay nhận
+$(document).on('click','#btngaynhan',function(){
+    var ttngaynhan = $('#ttngaynhan').val();
+    if(ttngaynhan == ''){
+        $('#tbngaynhan').html('hãy chọn ngày..');
+        $('#tbngaynhan').css({'color':'red'});
+    }else{
+        $.ajax({
+            url: 'capnhatdon/dstheongaynhan.php',
+            method: 'POST',
+            data:{ttngaynhan:ttngaynhan},
+            success:function(res){
+                $('#thaythetk').html(res);
+            }
+        });
+    }
+});
+// xem đơn theo ngay trả
+$(document).on('click','#btngaytra',function(){
+    var ttngaytra = $('#ttngaytra').val();
+    if(ttngaytra == ''){
+        $('#tbngaytra').html('hãy chọn ngày..');
+        $('#tbngaytra').css({'color':'red'});
+    }else{
+        $.ajax({
+            url: 'capnhatdon/dstheongaytra.php',
+            method: 'POST',
+            data:{ttngaytra:ttngaytra},
+            success:function(res){
+                $('#thaythetk').html(res);
+            }
+        });
+    }
+});
+// xem đơn theo trạng thái
+$(document).on('click','#bttrangthai',function(){
+    var xemtheott = $('#xemtheott').val();
+    
+        $.ajax({
+            url: 'capnhatdon/dstheotrangthai.php',
+            method: 'POST',
+            data:{xemtheott:xemtheott},
+            success:function(res){
+                $('#thaythetk').html(res);
+            }
+        });
+});
+// đăng xuất
+$(document).on('click','#dangxuat',function(){
+    location.replace('http://localhost:8888/copybtl/index.php');
+})
 
 });
 

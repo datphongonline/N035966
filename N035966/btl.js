@@ -58,8 +58,10 @@ $(document).ready(function () {
         var matkhau = $('#password').val();
         if(tendangnhap == ''){
             $('#thongbaoloi').html('bạn chưa nhập tên');
+            $('#thongbaoloi').css({'color':'red'});
         }else if(matkhau ==''){
             $('#thongbaoloi').html('bạn chưa nhập mật khẩu');
+            $('#thongbaoloi').css({'color':'red'});
         }else{
             $.ajax({
             url:'checklogin.php',
@@ -70,7 +72,7 @@ $(document).ready(function () {
             },
             success:function(response){
                 if(response == 1){
-                    location.replace('admin/quanly.php');
+                    location.assign('http://localhost:8888/copybtl/admin/quanly.php');
                     $('#formlogin').css({'display':'none'});
                 }else{
                     $('#thongbaoloi').html('tên đăng nhập hoặc mật khẩu không chính xác');
