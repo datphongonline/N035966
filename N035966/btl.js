@@ -72,7 +72,7 @@ $(document).ready(function () {
             },
             success:function(response){
                 if(response == 1){
-                    location.assign('http://localhost:8888/copybtl/admin/quanly.php');
+                    location.assign('http://localhost:8888/N035966/admin/quanly.php');
                     $('#formlogin').css({'display':'none'});
                 }else{
                     $('#thongbaoloi').html('tên đăng nhập hoặc mật khẩu không chính xác');

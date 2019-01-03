@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="quanly.css">
     <script src="jquery.js"></script>
     <script src="quanly.js"></script>
+    <script src="quanly1.js"></script>
 </head>
 <body>
     <header>
@@ -51,7 +52,7 @@
                 <ul id="hien2">
                     <li id="themdatphong">thêm đặt phòng</li>
                     <li id="capnhatdon">cập nhật đơn</li>
-                    <li>đơn hủy</li>
+                    <li id="huydatphong">đơn hủy</li>
                 </ul>
         </div>
         <div class="khoi1">

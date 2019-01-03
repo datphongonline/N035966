@@ -18,7 +18,7 @@
 //   }
 
 $(document).ready(function(){
-    alert('thong bao');
+    alert('thong bao quanly.js');
     
     document.getElementById('container').addEventListener('click',function(){
         this.classList.toggle('change');
