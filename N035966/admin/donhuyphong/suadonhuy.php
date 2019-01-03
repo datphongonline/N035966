@@ -6,7 +6,7 @@
      $chuthichsua = $_POST['chuthichsua'];
      $ngayhuysua = $_POST['ngayhuysua'];
     
-    $lenh = 'update huydp set mak ='.$maksua.',map ='.$mapsua.',chuthich = '.$chuthichsua.',ngayhuy = "'.$ngayhuysua.'" where mahuydp ='.$mahuydpsua;
+    $lenh = 'update huydp set mak ='.$maksua.',map ='.$mapsua.',chuthich = "'.$chuthichsua.'",ngayhuy = "'.$ngayhuysua.'" where mahuydp ='.$mahuydpsua;
     mysqli_set_charset($conn,'utf8');
     $kq =  mysqli_query($conn, $lenh);
     if($kq){

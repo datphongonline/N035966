@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 //------------------------------------ phan phong --------------
-alert('thogn bao quanly1.js');
 $(document).on('click','#cnphong', function(){
     $.ajax({
         url: 'phong/dsphong.php',
@@ -571,6 +570,9 @@ $(document).on('click','#xacnhansuaTK', function(){//
 });
 //------------------------------------ phan huy đặt phòng --------------
 $(document).on('click','#huydatphong', function(){
+    donhuyphong();
+});
+function donhuyphong(){
     $.ajax({
         url: 'donhuyphong/dsdonhuy.php',
         method:'GET',
@@ -578,8 +580,8 @@ $(document).on('click','#huydatphong', function(){
             $('#in').html(response);
         }
     });
-});
-$(document).on('click','.nutsua',function(){
+}
+$(document).on('click','.nutsuahp1',function(){
     $('#suadl').css({'display':'block'});
      var id = $(this).attr('value');
     $('#mahuydpsua').attr('value',id);//
@@ -598,47 +600,15 @@ $(document).on('click','.nutsua',function(){
             
             
         }
-    })
-})
-$(document).on('click','.nutxoa', function(){
+    });
+});
+$(document).on('click','.nutxoahp1', function(){
     $('#xoadl').css({'display':'block'});
-    $('#xacnhanxoa').show();//
+    $('#xacnhanxoaHDP').show();//
     var id = $(this).attr('value');
     $('#xacnhanxoaHDP').attr('value',id);// // chuyển id vào value để xác nhận
 });
-// them   tài khoản
-// $(document).on('click', '#xacnhanthemTK', function(){//
-//     var tentkthem = $('#tentkthem').val();//
-//     var mkthem = $('#mkthem').val();//
-   
-//     if( tentkthem == '' || mkthem == '' ){//
-//         $('#tbthem').html('bạn chưa nhập tên');
-//         $('#tbthem').css({'color':'red'});
-//     }
-//     else{
-//         $.ajax({
-//         url: 'taikhoan/themtaikhoan.php',//
-//         method: 'POST',
-//         data:{
-            
-//             tentkthem :tentkthem,//
-//             mkthem :mkthem,//
-            
-//             },
-//         success: function(response){
-//             if(response == 1){
-//                 $('#tbthem').html('đã thêm thành công');
-//                 $('#tbthem').css({'color':'#006699'});
-//                 $('#tentkthem').val('');//
-//                 $('#mkthem').val('');//
-//             }else{
-//                 $('#tbthem').html('lỗi. kiểm tra lại');
-//                 $('#tbthem').css({'color':'red'});
-//             }
-//         }
-//     });
-//     }
-// });
+
 // xoa hủy đặt phòng
 $(document).on('click','#xacnhanxoaHDP', function(){//
     var id = $('#xacnhanxoaHDP').attr('value');//
@@ -651,6 +621,7 @@ $(document).on('click','#xacnhanxoaHDP', function(){//
                 $('#tbxoa').html('xóa thành công');
                 $('#tbxoa').css({'color':'#006699'});
                 $('#xacnhanxoaHDP').hide();//
+                donhuyphong();
             }
         }
     });
@@ -680,6 +651,7 @@ $(document).on('click','#xacnhansuaHDP', function(){//
                 $('#tbsua').html('sửa thành công');
                 $('#tbsua').css({'color':'#006699'});
                // $('#xacnhansuaTT').hide();//
+               donhuyphong();
             }else{
                 $('#tbsua').html('lỗi,hãy kiểm tra lại dữ liệu');
                 $('#tbsua').css({'color':'red'});

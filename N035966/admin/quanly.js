@@ -1,24 +1,5 @@
-// function timkiem() { // tim kiem
-//     var input, filter, table, tr, td, i, txtValue;
-//     input = document.getElementById("myInput");
-//     filter = input.value.toUpperCase();
-//     table = document.getElementById("myTable");
-//     tr = table.getElementsByTagName("tr");
-//     for (i = 0; i < tr.length; i++) {
-//       td = tr[i].getElementsByTagName("td")[0];
-//       if (td) {
-//         txtValue = td.textContent || td.innerText;
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//           tr[i].style.display = "";
-//         } else {
-//           tr[i].style.display = "none";
-//         }
-//       }       
-//     }
-//   }
 
 $(document).ready(function(){
-    alert('thong bao quanly.js');
     
     document.getElementById('container').addEventListener('click',function(){
         this.classList.toggle('change');
@@ -123,6 +104,10 @@ $(document).ready(function(){
         var id = $(this).attr('value');
         $('#xacnhanxoa').attr('value',id); // chuyển id vào value để xác nhận
     });
+
+
+
+
     // tat thong bao
     $(document).on('click','#huythem', function(){
         $('#themdl').css({'display':'none'});
@@ -135,6 +120,18 @@ $(document).ready(function(){
     });
     // -------------------- phần tiện nghi-------------------------------------------
     // them tien nghi
+    //thay đổi
+    $(document).on('click','.nutsuatn',function(){
+        $('#suadl').css({'display':'block'});
+         var id = $(this).attr('value');
+        $('#matnsua').attr('value',id);
+    })
+    $(document).on('click','.nutxoatn', function(){
+        $('#xoadl').css({'display':'block'});
+        $('#xacnhanxoa').show();
+        var id = $(this).attr('value');
+        $('#xacnhanxoa').attr('value',id); // chuyển id vào value để xác nhận
+    });
     $(document).on('click', '#xacnhanthem', function(){
         var tentnt = $('#tentnthem').val();
         if(tentnt == ''){
@@ -299,7 +296,7 @@ function themdatphong(){
         }
     });
 }
-$(document).on('click','.nutsua',function(){ // thay doi
+$(document).on('click','.nutsuadp2',function(){ // thay doi
     $('#suadl').css({'display':'block'});
      var id = $(this).attr('value');
     $('#mattdpsua').attr('value',id);
@@ -320,7 +317,7 @@ $(document).on('click','.nutsua',function(){ // thay doi
         }
     })
 })
-$(document).on('click','.nutxoa', function(){ // thay doi
+$(document).on('click','.nutxoadp2', function(){ // thay doi
     $('#xoadl').css({'display':'block'});
     $('#xacnhanxoaDP').show();
     var id = $(this).attr('value');
@@ -428,6 +425,7 @@ $(document).on('click', '#xacnhanxoaDP', function(){ // thay doi
 });
 
 //------------------------------------ phan cập nhật phòng --------------
+//thay đổi
 
 $(document).on('click','#capnhatdon', function(){
     // $.ajax({
@@ -448,28 +446,28 @@ function capnhatphong(){
         }
     });
 }
-$(document).on('click','.nutsua',function(){ // thay doi
+$(document).on('click','.nutsuadon1',function(){ // thay doi
     $('#suadl').css({'display':'block'});
      var id = $(this).attr('value');
     $('#mattdpsua').attr('value',id);
     $.ajax({
-        url: 'capnhatdon/laydlsua.php',
+        url: 'capnhatdon/laydlsua1.php',
         method: 'POST',
         data: {id : id},
         success: function(response){
             var kq = response.split(',');
-            //$response =[$row['tenp'],$row['mak'],$row['tentt'],$row['mattdp'],$row['datphongtu'],$row['denngay'],$row['tongtien'] ,$row['chuthich']];
+            //$response =[$row['tenp'],$row['mak'],$row['datphongtu'],$row['denngay'],$row['tongtien'] ,$row['chuthich']];
             $('#tenpsua').attr('value',kq[0]);
             $('#maksua').attr('value',kq[1]);
-            $('#datphongtusua').attr('value',kq[4]);
-            $('#denngaysua').attr('value',kq[5]);
-            $('#tongtiensua').attr('value',kq[6]);
-            $('#chuthichsua').attr('value',kq[7]);
+            $('#datphongtusua').attr('value',kq[2]);
+            $('#denngaysua').attr('value',kq[3]);
+            $('#tongtiensua').attr('value',kq[4]);
+            $('#chuthichsua').attr('value',kq[5]);
 
         }
     })
 })
-$(document).on('click','.nutxoa', function(){ // thay doi
+$(document).on('click','.nutxoadon1', function(){ // thay doi
     $('#xoadl').css({'display':'block'});
     var id = $(this).attr('value');
     $('#xacnhanxoaDON').attr('value',id); // chuyển id vào value để xác nhận
@@ -607,9 +605,11 @@ $(document).on('click','#bttrangthai',function(){
 });
 // đăng xuất
 $(document).on('click','#dangxuat',function(){
-    location.replace('http://localhost:8888/copybtl/index.php');
+    location.replace('http://localhost:8888/N035966/index.php');
+});
+$(document).on('click','#moi',function(){
+    capnhatphong();
 })
-
 });
 
 

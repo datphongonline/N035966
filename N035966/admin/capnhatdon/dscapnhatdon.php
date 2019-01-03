@@ -60,8 +60,8 @@
                     <td><?php echo $row['chuthich']; ?></td>
                     <td>
                         <div>
-                            <button value="<?php echo $row['mattdp']; ?>" class="nutsua">update</button>
-                            <button value="<?php echo $row['mattdp']; ?>" class="nutxoa">xóa</button>
+                            <button value="<?php echo $row['mattdp']; ?>" class="nutsuadon1 nutsuacs">update</button>
+                            <button value="<?php echo $row['mattdp']; ?>" class="nutxoadon1 nutxoacs">xóa</button>
                         </div>
                     </td>
                   </tr>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Khách Sạn ABC</title>
+    <link rel="icon" href="image/logo.png" type="image/png" />
     <link rel="stylesheet" href="btl.css">
     <script src="jquery.js"></script>
     <script src="btl.js"></script>
@@ -48,10 +49,10 @@
             <form action="#">
                 <div class="thoat" id="thoat">x</div>
                 <h2 style=" text-align: center">Đăng nhập</h2>
-                <label for="username"><b>Username</b></label>
+                <label for="username"><b>Tên đăng nhập</b></label>
                 <input type="text" placeholder="nhập tên" name="username" id="username" required> <br>
 
-                <label for="password"><b>Password</b></label>
+                <label for="password"><b>Mật khẩu</b></label>
                 <input type="password" placeholder="nhập mật khẩu" name="password" id="password" required> <br>
 
                 
@@ -144,7 +145,7 @@
 
         <fieldset class="thongtinphong">
             <h2>Danh Sách Phòng</h2>
-
+            <p style="color: #666699">hãy nhập ngày nhận và ngày trả để tìm kiếm và đặt phòng.....</p>
             <!-- hiện danh sách phòng-->
             <div class='dsphong' id="dsphong">
             
@@ -211,10 +212,26 @@
         <div id="hiennd">
             
         </div>
+        <div class="ktdlk1" id="ktdlk1">
+            <div class="ktdlk">
+                <h3 style="text-align:center">kiểm tra phòng đã đặt</h3>
+                <label>nhập số điện thoại</label> <input id="sdtkt" type="text" required> <br>
+                 <!--thay đổi-->
+                 
+                <button id="thoatktdlk">thoát</button>
+                <button id="hienktdlk">hiện thông tin</button>
+                <div id="tbkt" style="clear: right">thông tin tìm....</div>
+            </div>
+        </div>
     </section>
     <footer>
-        <img src="" alt="">
-
+        
+        <div class="ftt">
+        <img src="image/logo.png" alt="">
+        <span style="font-size: 30px">SaiGon Hotel</span> <br>
+        <span>Liên Hệ : 000000000</span>
+        </div>
+        
     </footer>
     
 </body>

@@ -32,8 +32,8 @@
                     <td><?php echo $row['chuthich']; ?></td>
                     <td>
                         <div>
-                            <button value="<?php echo $row['mattdp']; ?>" class="nutsua">Sửa</button>
-                            <button value="<?php echo $row['mattdp']; ?>" class="nutxoa">Xóa</button>
+                            <button value="<?php echo $row['mattdp']; ?>" class="nutsuadp2 nutsuacs">update</button>
+                            <button value="<?php echo $row['mattdp']; ?>" class="nutxoadp2 nutxoacs">xóa</button>
                         </div>
                     </td>
                   </tr>

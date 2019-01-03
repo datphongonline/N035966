@@ -27,7 +27,7 @@
         <div class="thongtinht" id="dangxuat">
             <span>đăng xuất</span>
         </div>
-        <div class="thongtinht">
+        <div class="thongtinht" id="moi">
             <span>Mới</span>
         </div>
         <div class="tenks" style="font-size: 25px">

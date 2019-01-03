@@ -16,8 +16,10 @@ $(document).ready(function(){
                 sdt:sdt
             },
             success:function(response){
-                $('baocao').html(response);
-                alert(response);
+
+                if(response == 1){
+                    alert('thanh cong');
+                }else alert('khong thanh ciong');
             }
 
         })

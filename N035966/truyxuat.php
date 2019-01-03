@@ -46,10 +46,10 @@
               ?>
                 <h2>Thông Tin</h2>
 
-                <p>- mã phòng : <span name="map" id="map">
+                <p>-Mã phòng : <span name="map" id="map">
                         <?php echo $row4['map']?></span> </p>
-                <p>- Ngày nhận phòng: <span name="ngaynhan1" id="ngaynhan1"><?php echo $_POST['ngaynhan']?></span></p>
-                <p>- số ngày đặt: <span name="ngaytra1" id="ngaytra1"><?php echo $_POST['ngaytra']?></span></p>
+                <p>-Ngày nhận phòng: <span name="ngaynhan1" id="ngaynhan1"><?php echo $_POST['ngaynhan']?></span></p>
+                <p>-Số ngày đặt: <span name="ngaytra1" id="ngaytra1"><?php echo $_POST['ngaytra']?></span></p>
 
                 <div style="display:none">
                  <!--chứa dữ liệu-->

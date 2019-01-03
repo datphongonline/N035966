@@ -1,5 +1,5 @@
 body{
-    background-image: url('image/hinhnen4.jpg');
+    background-image: url('image/hinhnen5.jpg');
     margin: 0px;
 }
 header{
@@ -128,7 +128,7 @@ header{
     text-align: center;
     margin-bottom: 40px;
     border-radius: 2px;
-    color: white
+    color: white;
 }
 .thoat:hover{
     color: red;
@@ -148,7 +148,7 @@ header{
 .ten span{
     
     font-size: 35px;
-    color: white;
+    color: wheat;
     
 }
 
@@ -294,7 +294,7 @@ section{
    position: sticky;
    z-index: 1;
    clear: left;
-   padding:10px 0px;
+   padding:20px 0px;
    border-top: 1px solid gray;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
    border-radius: 5px;
@@ -375,7 +375,6 @@ section{
      top: 0;
      width: 100%; /* Full width */
      height: 100%; /* Full height */
-     overflow: auto; /* Enable scroll if needed */
      background-color: rgb(0,0,0); /* Fallback color */
      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
      padding-top: 60px;
@@ -389,7 +388,8 @@ section{
        left: 15%;
        position: relative;
        background-color: #f2f2f2;
-       padding-left: 30px
+       padding-left: 30px;
+       margin-top: 30px
       
    }
    
@@ -423,10 +423,84 @@ section{
        margin-left: 20px;
        cursor: pointer;
    }
+/*hien thon hoa don cua khach theo sdt*/
+
+.ktdlk1{/* Hidden by default */
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  .ktdlk{
+      position: relative;
+      width: 52%;
+      left: 25%;
+      height: auto;
+      background-color: white;
+      padding: 50px 110px;
+      box-sizing: border-box;
+      overflow: auto;
+  }
+  .ktdlk input[type=text]{
+      margin: 6px 10px;
+      padding: 6px 10px;
+      width: 260px
+  }
+  
+  .ktdlk button{
+    margin: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    background-color: #006699;
+    color: white;
+    border-radius: 2px;
+      float: right;
+  }
+  .ktdlk label{
+      display: inline-block;
+      width: 100px;
+      position: relative;
+  }
+  .ktdlk select{
+      margin: 6px 10px;
+      padding: 6px 10px;
+      width: 130px;
+  }
+  #huydp{
+      margin: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    color: black;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+  }
+  
 /*--------*/
 footer{
+    box-sizing: border-box;
     width: 100%;
     height: 100px;
     background-color: #000033;
     clear: left;
+}
+.ftt{
+    color: wheat;
+    width: 50%;
+}
+.ftt img{
+    float: left;
+}
+.ftt span{
+    padding: 10px 10px;
 }

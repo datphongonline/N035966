@@ -21,8 +21,8 @@
                     <td><?php echo $row['tentn']; ?></td>
                     <td>
                         <div>
-                            <button value="<?php echo $row['matn']; ?>" class="nutsua">Sửa</button>
-                            <button value="<?php echo $row['matn']; ?>" class="nutxoa">Xóa</button>
+                            <button value="<?php echo $row['matn']; ?>" class="nutsuatn">Sửa</button>
+                            <button value="<?php echo $row['matn']; ?>" class="nutxoatn">Xóa</button>
                         </div>
                     </td>
                   </tr>

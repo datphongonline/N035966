@@ -27,8 +27,8 @@
                     <td><?php echo $row['ngayhuy']; ?></td>
                     <td>
                         <div>
-                            <button value="<?php echo $row['mahuydp']; ?>" class="nutsua">Sửa</button>
-                            <button value="<?php echo $row['mahuydp']; ?>" class="nutxoa">Xóa</button>
+                            <button value="<?php echo $row['mahuydp']; ?>" class="nutsuahp1 nutsuacs">update</button>
+                            <button value="<?php echo $row['mahuydp']; ?>" class="nutxoahp1 nutxoacs">xóa</button>
                         </div>
                     </td>
                   </tr>

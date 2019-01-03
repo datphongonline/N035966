@@ -119,4 +119,52 @@ $(document).ready(function () {
             }
         });
     });
+    // kiem tra dat phong
+    // chức năng kiểm tra thông tin khách dat phong
+$(document).on('click','#thoatktdlk',function(){
+    $('#ktdlk1').css({'display':'none'});
+})
+$(document).on('click','#kiemtradp',function(){
+    $('#ktdlk1').css({'display':'block'});
+})
+$(document).on('click','#hienktdlk',function(){
+    var sdt = $('#sdtkt').val();
+    if(sdt == ''){
+        $('#tbkt').html('bạn chưa nhập số điện thoại...');
+        $('#tbkt').css({'color':'red'});
+    }else{
+        $.ajax({
+            url: 'ktdondp.php',
+            method: 'POST',
+            data:{sdt :sdt},
+            success:function(res){
+                if(res == null){
+                    $('#tbkt').html('không tìm thấy..');
+                $('#tbkt').css({'color':'red'});
+                }else{
+                    $('#tbkt').html(res);
+                $('#tbkt').css({'color':'black', 'font-size':'20px'});
+                }
+                
+            }
+        })
+    }
+});
+// huy dp
+$(document).on('click','#huydp',function(){
+    var id = $(this).attr('value');
+    alert(id);
+    $.ajax({
+        url: 'huyphong.php',
+        method: 'POST',
+        data:{ id : id},
+        success: function(response){
+            if(response == 1){
+                $('#tbkt').html('xóa thành công');
+                $('#tbkt').css({'color':'#006699'});
+            }else alert('không thành công');
+        }
+    });
+});
+
 });
