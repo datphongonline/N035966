@@ -7,7 +7,7 @@
      // $connect = mysqli_connect("localhost", "root", "", "qlthuvien");
      $lenh2 = 'select hinhanh from anh where maanh'.$_POST['layid'];
      $lenh3 = 'select tentn from tiennghi where matn in(select matn from cttn where map = "'.$_POST['layid'].'")';
-     $lenh4 = 'select map,giap from phong where map ='.$_POST['layid'];
+     $lenh4 = 'select tenp,map,giap from phong where map ='.$_POST['layid'];
      mysqli_set_charset($conn,'utf8');
      $kq3 = mysqli_query($conn,$lenh3);
      ?>
@@ -46,10 +46,11 @@
               ?>
                 <h2>Thông Tin</h2>
 
-                <p>-Mã phòng : <span name="map" id="map">
+                <p>Mã phòng : <span name="map" id="map">
                         <?php echo $row4['map']?></span> </p>
-                <p>-Ngày nhận phòng: <span name="ngaynhan1" id="ngaynhan1"><?php echo $_POST['ngaynhan']?></span></p>
-                <p>-Số ngày đặt: <span name="ngaytra1" id="ngaytra1"><?php echo $_POST['ngaytra']?></span></p>
+                <p>Số phòng: <span ><?php echo $row4['tenp']?></span></p>
+                <p>Ngày nhận phòng: <span name="ngaynhan1" id="ngaynhan1"><?php echo $_POST['ngaynhan']?></span></p>
+                <p>Số ngày đặt: <span name="ngaytra1" id="ngaytra1"><?php echo $_POST['ngaytra']?></span></p>
 
                 <div style="display:none">
                  <!--chứa dữ liệu-->

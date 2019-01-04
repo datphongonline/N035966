@@ -151,9 +151,8 @@ $(document).on('click','#hienktdlk',function(){
     }
 });
 // huy dp
-$(document).on('click','#huydp',function(){
+$(document).on('click','.huydpkt',function(){
     var id = $(this).attr('value');
-    alert(id);
     $.ajax({
         url: 'huyphong.php',
         method: 'POST',

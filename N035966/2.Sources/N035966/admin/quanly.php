@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Quản Lý</title>
     <link rel="stylesheet" href="quanly.css">
     <script src="jquery.js"></script>
     <script src="quanly.js"></script>
@@ -31,7 +31,7 @@
             <span>Mới</span>
         </div>
         <div class="tenks" style="font-size: 25px">
-            <span>Hanoi Hotel</span>
+            <span>SaiGon Hotel</span>
         </div>
     </header>
     <section class="menu" id="menu">
@@ -56,18 +56,7 @@
                 </ul>
         </div>
         <div class="khoi1">
-            <button type="button" class="tuychon" id="tuychon3">phòng</button>
-            <ul id="hien3">
-                <li>Danh sách phòng</li>
-            </ul>
-        </div>
-        <div class="khoi1">
                 <button type="button" class="tuychon" id="tuychon4">thống kê</button>
-                <ul id="hien4">
-                    <li>khách hàng</li>
-                    <li>hóa đơn</li>
-                    <li>phòng</li>
-                </ul>
         </div>
 
     </section>

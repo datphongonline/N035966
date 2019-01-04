@@ -603,6 +603,16 @@ $(document).on('click','#bttrangthai',function(){
             }
         });
 });
+// don het han
+$(document).on('click','#dshethan',function(){
+        $.ajax({
+            url: 'capnhatdon/donhethan.php',
+            method: 'GET',
+            success:function(res){
+                $('#thaythetk').html(res);
+            }
+        });
+});
 // đăng xuất
 $(document).on('click','#dangxuat',function(){
     location.replace('http://localhost:8888/N035966/index.php');

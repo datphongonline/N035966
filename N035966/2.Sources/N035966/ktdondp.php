@@ -17,7 +17,7 @@
     <p>số điện thoại: <span><?php echo $row['sdt']?></span></p>
     <p>ngày nhận: <span><?php echo $row['datphongtu']?></span></p>
     <p>ngày trả: <span><?php echo $row['denngay']?></span></p>
-    <button value="<?php echo $row['mattdp'];?>" id="huydp">  hủy đặt phòng</button> <br> <br> <br>
+    <button value="<?php echo $row['mattdp'];?>" class="huydpkt">  hủy đặt phòng</button> <br> <br> <br>
      </div>
     
 

@@ -16,7 +16,8 @@
                     ?>
                     <option value="<?php echo $kqxem['matt'] ?>"> <?php echo $kqxem['tentt']?></option>
                           <?php }?>
-                </select>
+                </select> <br>
+                <button id="dshethan" class="luachon">Đơn hết hạn</button> 
                 <!-- <input type="date" id="xemtheott"> -->
                 
                 <input type="text" id="nhaptk" placeholder="nhập mã khách tìm" title="Type in a name">

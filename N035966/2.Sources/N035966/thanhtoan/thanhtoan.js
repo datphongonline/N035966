@@ -18,8 +18,8 @@ $(document).ready(function(){
             success:function(response){
 
                 if(response == 1){
-                    alert('thanh cong');
-                }else alert('khong thanh ciong');
+                    alert('đặt phòng thành công');
+                }else alert('không thành công hãy ra trang chủ xem lại ngày tìm kiếm');
             }
 
         })

@@ -52,8 +52,8 @@
             <h3>Kiểm Tra Thông Tin Đặt Phòng</h3>
             <div class="anh">
                 <img src="image/anh1.jpeg" alt="">
-                <h4>Ambassador Saigon Hotel</h4>
-                <p>Thanh toán tại khách sạn</p>
+                <h4 style="text-align:center">Saigon Hotel</h4>
+                <p >Thanh toán tại khách sạn</p>
             </div>
             <div class="thongtindat">
                 <p>mã phòng: <span id="map1"><?php echo $map ?></span></p>
@@ -88,7 +88,8 @@
         <div class="csthanhtoan">
             <h3>Chính sách thanh toán tại khách sạn</h3>
             <p>Hình thức Thanh toán tại Khách sạn cho phép bạn giữ phòng mà không cần thanh toán ngay. Bạn sẽ thanh
-                toán toàn bộ chi phí đặt phòng bằng tiền mặt hoặc thẻ khi nghỉ tại khách sạn. </p>
+                toán toàn bộ chi phí đặt phòng bằng tiền mặt hoặc thẻ khi nghỉ tại khách sạn. </p> <br>
+               <p> đến 12h cùng ngày nhận mà chưa nhận phòng hóa đơn sẽ bị hủy.</p>
         </div>
 
     </section>
